@@ -144,6 +144,7 @@ window.addEventListener("load", function() {
 	bindNavToggle();
 	bindCollapsibles();
 	bindTabs();
-	bindFilters();
+  bindFilters();
+
 
 });
