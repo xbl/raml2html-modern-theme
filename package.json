@@ -1,10 +1,10 @@
 {
-  "name": "raml2html-modern-theme",
+  "name": "@xbl/raml2html-modern-theme",
   "version": "1.0.8",
   "description": "Modern theme for raml2html utility.",
   "main": "index.js",
   "scripts": {
-    "build": "cat ./scss/main.scss | node-sass > ./dist/style.css",
+    "build": "stylus -w ./stylus/main.styl -o ./dist/style.css",
     "test": "raml2html -v --template ./index.nunjucks -i ./demo/raml-examples/others/world-music-api/api.raml -o ./demo/api.html",
     "test:w": "watch -p \"/dist/\" -p \"/demo/\" \"npm run build-sass && npm run test\" ./",
     "prepublish": "npm run build"
@@ -31,8 +31,8 @@
     "theme"
   ],
   "devDependencies": {
-    "node-sass": "^4.11.0",
-    "watch": "^1.0.2",
-    "raml2html": "^7.2.0"
+    "raml2html": "^7.2.0",
+    "stylus": "^0.54.7",
+    "watch": "^1.0.2"
   }
 }
