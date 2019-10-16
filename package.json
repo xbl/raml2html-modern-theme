@@ -1,6 +1,6 @@
 {
   "name": "@xbl/raml2html-modern-theme",
-  "version": "1.0.8",
+  "version": "1.0.0",
   "description": "Modern theme for raml2html utility.",
   "main": "index.js",
   "scripts": {
@@ -8,25 +8,23 @@
     "prepublish": "npm run build"
   },
   "author": {
-    "name": "Jiri Hybek",
-    "email": "jiri@hybek.cz",
-    "url": "https://jiri.hybek.cz/"
+    "name": "xbl",
+    "email": "x_bl@sina.com",
+    "url": "https://xbl.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jirihybek/raml2html-modern-theme.git"
+    "url": "git+https://github.com/xbl/raml2html-modern-theme.git"
   },
-  "bugs": {
-    "url": "https://github.com/jirihybek/raml2html-modern-theme/issues"
-  },
-  "homepage": "https://github.com/jirihybek/raml2html-modern-theme#readme",
+  "homepage": "https://github.com/xbl/raml2html-modern-theme#readme",
   "license": "MIT",
   "keywords": [
     "raml",
     "raml2html",
     "modern",
     "design",
-    "theme"
+    "theme",
+    "raml-mocker"
   ],
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
