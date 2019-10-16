@@ -4,9 +4,7 @@
   "description": "Modern theme for raml2html utility.",
   "main": "index.js",
   "scripts": {
-    "build": "stylus -w ./stylus/main.styl -o ./dist/style.css",
-    "test": "raml2html -v --template ./index.nunjucks -i ./demo/raml-examples/others/world-music-api/api.raml -o ./demo/api.html",
-    "test:w": "watch -p \"/dist/\" -p \"/demo/\" \"npm run build-sass && npm run test\" ./",
+    "build": "webpack",
     "prepublish": "npm run build"
   },
   "author": {
@@ -31,8 +29,25 @@
     "theme"
   ],
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "raml2html": "^7.2.0",
+    "style-loader": "^1.0.0",
     "stylus": "^0.54.7",
-    "watch": "^1.0.2"
+    "stylus-loader": "^3.0.2",
+    "watch": "^1.0.2",
+    "webpack": "^4.41.1",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0"
+  },
+  "dependencies": {
+    "highlight.js": "^9.15.10",
+    "marked": "^0.7.0",
+    "minimize": "^2.2.0",
+    "nunjucks": "^3.2.0",
+    "nunjucks-markdown": "^2.0.1",
+    "pretty": "^2.0.0"
   }
 }
