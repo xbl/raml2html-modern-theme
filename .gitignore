@@ -2,3 +2,4 @@ node_modules
 dist
 demo/api.html
 .DS_Store
+*.log
