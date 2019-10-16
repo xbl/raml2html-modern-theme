@@ -1,4 +1,6 @@
+import './stylus/main.styl';
 import 'highlight.js/styles/vs2015.css';
+
 import hljs from 'highlight.js/lib/highlight';
 import json from 'highlight.js/lib/languages/json';
 import xml from 'highlight.js/lib/languages/xml';
@@ -8,8 +10,6 @@ hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('bash', bash);
 hljs.initHighlightingOnLoad();
 
-
-import '../stylus/main.styl';
 
 /**
  * Binds navigation children toggling
