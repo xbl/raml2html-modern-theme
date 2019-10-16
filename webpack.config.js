@@ -26,15 +26,9 @@ module.exports = {
       {
         test: /\.styl$/,
         use: [
-          {
-            loader: "style-loader" // creates style nodes from JS strings
-          },
-          {
-            loader: "css-loader" // translates CSS into CommonJS
-          },
-          {
-            loader: "stylus-loader" // compiles Stylus to CSS
-          }
+          MiniCssExtractPlugin.loader,
+          "css-loader", // translates CSS into CommonJS
+          "stylus-loader", // compiles Stylus to CSS
         ]
       },
     ]

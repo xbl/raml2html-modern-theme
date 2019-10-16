@@ -1,7 +1,5 @@
-/demo
-/scss
 .gitignore
-.gitmodules
+.editorconfig
 .DS_Store
 screenshot1.jpg
 screenshot2.jpg
