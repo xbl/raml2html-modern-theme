@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "publish": "npm publish --access=public",
     "prepublish": "npm run build"
   },
   "author": {
@@ -37,7 +38,8 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "watch": "^1.0.2",
-    "webpack": "^4.41.1"
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "highlight.js": "^9.15.10",
