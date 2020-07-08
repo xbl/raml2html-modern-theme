@@ -31,6 +31,10 @@ module.exports = {
           "stylus-loader", // compiles Stylus to CSS
         ]
       },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        loader: "url-loader"
+      },
     ]
   },
   plugins: [
