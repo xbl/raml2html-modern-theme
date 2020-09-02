@@ -31,7 +31,7 @@
 			<span class="property__attr__val">{{ prop.minProperties }}</span>
 		</p>
 	{% endif %}
-	
+
 	{% if prop.maxProperties %}
 		<p class="property__attr">
 			<span class="property__attr__label">Max. properties:</span>
@@ -125,7 +125,7 @@
 
 	{% if prop.fileTypes %}
 		<div class="property__attr">
-			<span class="property__attr__label">File types:</span> 
+			<span class="property__attr__label">File types:</span>
 			<ul class="property__attr__val property__attr__val--list">
 				{% for fileType in prop.fileTypes %}
 					<li class="property__attr__val">{{ fileType }}</li>
@@ -143,7 +143,7 @@
 
 	{% if prop.enum %}
 		<div class="property__attr">
-			<span class="property__attr__label">Enum:</span> 
+			<span class="property__attr__label">Enum:</span>
 			<ul class="property__attr__val property__attr__val--list">
 				{% for enumItem in prop.enum %}
 					<li class="property__attr__val property__attr__val--pre">{{ enumItem }}</li>
@@ -354,7 +354,7 @@
 	{%- elif param.type == "object" and param.properties -%}
 		{{ curlQueryParams(param.properties, delimiter, prefix + itemKey, true) }}
 	{%- else -%}
-		{{ delimiter }}{{ prefix }}{{ itemKey }}={{ (param.example | urlencode) if param.example else "&lt;value&gt;" }}
+		{{ delimiter }}{{ prefix }}{{ itemKey }}={{ (param.examples[0].value | urlencode) if param.examples[0].value else "&lt;value&gt;" }}
 	{%- endif -%}
 {% endmacro %}
 
