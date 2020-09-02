@@ -373,7 +373,7 @@
 {% macro curlCommand(resource, method, baseUri) %}
 curl -X {{ method.method | upper }} \{% if method.headers.length %}
   {{ curlHeaders(method.headers) | trim }}{% endif %}{% if method.body and method.body.length %}
-  -H "Content-type: {{ method.body[0].key }}"
+  -H "Content-type: {{ method.body[0].key }}"\
   -d @{% if method.body[0].key == "application/json" %}body.json{% elif(method.body[0].key == "application/xml") %}body.xml{% else %}file{% endif %} \{% endif %}
   {{ baseUri + resource.parentUrl + resource.relativeUri }}{% if method.queryParameters %}{{ curlQueryParams(method.queryParameters, "?", "") | trim }}{% endif %}
 {% endmacro %}
